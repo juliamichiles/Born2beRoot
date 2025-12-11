@@ -1,22 +1,18 @@
-- should have the 42 header?
-- in the line bellow should it be my user or full 42 email? I think full email
-- should 'Description' and 'Project Description' be the same section? I don't think so
-
 _This project has been created as part of the 42 curriculum by juliatav_
 
 ## Description
 
-Born2BeRoot is a system administration project that introduces Virtual Machines and a series of key system-related concepts, such as virtualization, disk partitioning, LVM, service configuration, automated monitoring, and firewall management — all through setting a secure virtual environment.
+Born2BeRoot is a system administration project that introduces Virtual Machines and a series of key system-related concepts, such as virtualisation, disk partitioning, LVM, service configuration, automated monitoring, and firewall management — all through setting a secure virtual environment.
 
 ---
 ## Instructions
 
 * This project does not require compilation. 
-* To use the system here configured, start the virtual machine using VirtualBox and unlock the disk, now you should be able to connect to the server via SSH using:
+* To use the system here configured, start the virtual machine using VirtualBox and unlock the disk. Now you should be able to connect to the server via SSH using:
 	`ssh -p 4242 <login>@localhost`
 * To view sudo logs, check:
 	`/var/log/sudo/`
-* The monitoring script runs automatically every 10 minutes through cron and once at server startup, it can also be maually executed with:
+* The monitoring script runs automatically every 10 minutes through cron, and once at server startup, it can also be manually executed with:
 	`bash monitoring.sh`
 ---
 
@@ -37,9 +33,17 @@ This project was done using the following references:
 
 ---
 ## Project description
-- this section must also explain the choice of operating system (Debian or Rocky), with their respective pros and cons.
-- It must indicate the main design choices made during the setup (partitioning, security policies, user management, services installed) as well as a comparison between:
-	-  Debian vs Rocky Linux
-	-  AppArmor vs SELinux
-	-  UFW vs firewalld
-	-  VirtualBox vs UTM
+
+For this project, it is required to install and configure a secure Linux server following strict specifications.
+I opted to work with **Debian** since it's a stable and reliable OS with extensive documentation, whose setup process is simpler and more beginner-friendly than Rocky's.
+
+The system was set up using encrypted LVM partitioning to improve security and organisation. A strong password policy was enforced as requested by the subject, as well as strict sudo configuration with logging and UFW was used to manage port access.
+User management includes the root account as well as a user that belongs to _user42_ and _sudo_ groups. SSH was installed as requested, running only on port **4242**. A monitoring script with the system's information will be displayed at startup and every 10 minutes.
+
+* **Debian vs. Rocky Linux:** Rocky Linux has a more complex system setup (mainly due to SELinux and firewalld), it provides strong security, but demands more knowledge from the user.
+
+* **AppArmor vs. SELinux:** AppArmor is a path-based system, making it easier to learn and to configure. SELinux uses label-based controls, which, as previously mentioned, are harder to configure.
+
+* **UFW vs. firewalld:** Firewalld is a dynamic, zone-based firewall manager; it has more features and it's more flexible than UFW, it's a more powerful tool than UFW, but it's also more challenging for beginners. UFW, on the other hand, is simpler and more user-friendly with its straightforward syntax, making it ideal for beginners and minimal setups.
+
+* **VirtualBox vs. UTM:** UTM is a lightweight alternative to VirtualBox; it's simpler and has fewer features, while VirtualBox is more complex and offers broad compatibility. It may be slower or less efficient in many cases.
