@@ -7,7 +7,7 @@
 - [ ] Possibly remove the 10 min thing from chrontab
 - [ ] Check YouTube video on how to get the signature and copy the VM for eval 
 
-## Questions
+## Questions:
 
 - Should have the 42 header?
 - In the line bellow should it be my user or full 42 email?
