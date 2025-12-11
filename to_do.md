@@ -6,6 +6,7 @@
 - [ ] Test sleep.sh script and ad this to crontab '@reboot /root/sleep.sh'
 - [ ] Possibly remove the 10 min thing from chrontab
 - [ ] Check YouTube video on how to get the signature and copy the VM for eval 
+- [ ] Test using testing script (the tester has not been tested!)
 
 ## Questions:
 
