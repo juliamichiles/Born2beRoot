@@ -38,6 +38,7 @@ For this project, it is required to install and configure a secure Linux server 
 I opted to work with **Debian** since it's a stable and reliable OS with extensive documentation, whose setup process is simpler and more beginner-friendly than Rocky's.
 
 The system was set up using encrypted LVM partitioning to improve security and organisation. A strong password policy was enforced as requested by the subject, as well as strict sudo configuration with logging and UFW was used to manage port access.
+
 User management includes the root account as well as a user that belongs to _user42_ and _sudo_ groups. SSH was installed as requested, running only on port **4242**. A monitoring script with the system's information will be displayed at startup and every 10 minutes.
 
 * **Debian vs. Rocky Linux:** Rocky Linux has a more complex system setup (mainly due to SELinux and firewalld), it provides strong security, but demands more knowledge from the user.
