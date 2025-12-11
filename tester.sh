@@ -135,7 +135,7 @@ divider
 echo "All automated checks completed."
 echo "Scroll up to review each section."
 echo "---"
-echo "WARNING: some of the requested tests are not checked here and must be done \"manually\", they are:"
+echo "\nWARNING: some of the requested tests are not checked here and must be done \"manually\", they are:\n"
 echo "- Reboot hostname persistence
 - Creating a new user during evaluation
 - Adding group during evaluation
